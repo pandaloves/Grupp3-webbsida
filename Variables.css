@@ -1,0 +1,168 @@
+/* General settings section starts */
+:root {
+  --font-family-one: Abel;
+  --font-family-two: Alex Brush;
+  --font-size-one: 35px;
+  --font-size-two: 28px;
+  --font-size-three: 24px;
+  --background-color-one: rgb(242, 150, 51);
+  --background-color-two: rgb(155, 83, 7);
+  --background-color-three: rgb(198, 124, 45);
+  --color: rgb(43, 42, 42);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-one);
+  font-size: var(--font-size-two);
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(90, 55, 3);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: var(--background-color-three);
+}
+
+/* Detailed settings section starts */
+/* Header section starts */
+#header {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 50px;
+  background-color: var(--background-color-one);
+  position: sticky;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+#header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+#logo-img {
+  height: 36px;
+}
+
+#logo-text {
+  font-family: var(--font-family-two);
+  font-size: var(--font-size-one);
+  font-weight: 8;
+  color: var(--color);
+}
+
+#main-nav ul {
+  display: flex;
+  list-style-type: none;
+  column-gap: 20px;
+}
+
+#user-logo {
+  width: 40px;
+  height: 30px;
+}
+
+.bar-menu {
+  color: var(--color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+/* Main section starts */
+#main {
+  background: radial-gradient(
+    1091px at 106.5% 111.5%,
+    rgb(250, 246, 213) 0.1%,
+    rgb(242, 202, 173) 42.2%,
+    rgb(192, 115, 13) 74.3%,
+    rgb(129, 71, 17) 100.2%
+  );
+}
+
+/* Footer section starts */
+#footer {
+  height: 60px;
+  background-color: var(--background-color-one);
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 20px;
+}
+
+#media {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 9px;
+}
+
+#media img {
+  height: 25px;
+}
+
+#footer-logo {
+  font-family: var(--font-family-two);
+  font-size: 1em;
+  font-weight: 8;
+  color: var(--color);
+}
+
+/* Media queries for responsiveness section starts*/
+
+/* Below 704px (Smaller tablets) */
+@media screen and (max-width: 720px) {
+  #header ul {
+    position: fixed;
+    flex-direction: column;
+    top: 50px;
+    left: 52%;
+    width: 36%;
+    height: 30%;
+    text-align: center;
+    transform: translateX(135%);
+    transition: transform 0.5s ease-in;
+    background-color: var(--background-color-one);
+    line-height: 2.5;
+  }
+
+  #header ul li {
+    font-size: 1rem;
+  }
+
+  .bar-menu {
+    display: block;
+  }
+
+  #header ul.show {
+    transform: translateX(0);
+  }
+
+  #logo-text {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,233 @@
+/* Include Variables.css in Home.css */
+@import url(“../Variables.css”);
+
+/* General-setting section starts*/
+* {
+  height: 100%;
+}
+
+/* Main section starts */
+#main {
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+/* Advertisement-picture section starts */
+#main-img {
+  width: 50%;
+  height: 75%;
+  border-radius: 10%;
+}
+
+/* Advertsiemnt, introduction and contact sections start*/
+#welcome {
+  width: 50%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+/* Advertisement */
+#advertisement {
+  font-size: 2em;
+  font-family: var(--font-family-one);
+  color: var(--color);
+  grid-column: 1 / 3;
+  margin-bottom: 20px;
+}
+
+#order-button {
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#gallery-button {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.adv-button {
+  background-color: var(--background-color-two);
+  border: none;
+  border-radius: 8%;
+  color: var(--color);
+  padding: 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  height: 40px;
+}
+
+/* Introduction */
+#intro-title {
+  grid-column: 1 / 3;
+  font-family: var(--font-family-one);
+  font-size: 35px;
+  color: var(--color);
+}
+
+#intro-text {
+  grid-column: 1 / 3;
+  font-family: var(--font-family-one);
+  font-size: 26px;
+  color: var(--color);
+  margin-bottom: 20px;
+}
+
+/* Contact */
+#phone-container {
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+#email-container {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+#phone-icon,
+#email-icon {
+  width: 25px;
+  height: 25px;
+  align-self: flex-start;
+}
+
+#phone-no,
+#email-addr {
+  padding-top: 35px;
+  font-family: var(--font-family-one);
+  font-size: 18px;
+  color: var(--color);
+  align-self: flex-end;
+}
+
+/* Media queries for responsiveness section starts*/
+
+/* Settings for the screen between 960px and 1200px (the smaller desktop screen) */
+@media (min-width: 960px) and (max-width: 1200px) {
+  #main-img {
+    width: 45%;
+  }
+
+  #welcome {
+    width: 55%;
+    row-gap: 15px;
+  }
+}
+
+/* Settings for the screen between 768px and 960px (tablets such as Ipad) */
+@media (min-width: 767px) and (max-width: 960px) {
+  #main-img {
+    width: 40%;
+  }
+
+  #welcome {
+    width: 60%;
+    row-gap: 12px;
+  }
+
+  #phone-icon,
+  #email-icon {
+    width: 23px;
+    height: 22px;
+  }
+
+  #phone-no,
+  #email-addr {
+    font-size: 16px;
+  }
+}
+
+/* Settings for the screen smaller than 768px (mobile phones) */
+@media (max-width: 767px) {
+  #main {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 100vh;
+  }
+
+  #main-img {
+    width: 80%;
+    height: 200px;
+    margin-top: -1em;
+  }
+
+  #welcome {
+    margin-top: 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  #advertisement {
+    grid-column: 1 / 3;
+    font-size: 1.5em;
+  }
+
+  #order-button {
+    grid-column: 1 / 2;
+    margin-bottom: 10px;
+  }
+
+  #gallery-button {
+    grid-column: 2 / 3;
+  }
+
+  .adv-button {
+    font-size: 18px;
+    min-height: 56px;
+  }
+
+  #intro-title {
+    grid-column: 1 / 3;
+    font-size: 1.35em;
+  }
+
+  #intro-text {
+    grid-column: 1 / 3;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  #phone-container {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #email-container {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -20px;
+  }
+
+  #phone-icon,
+  #email-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  #phone-no,
+  #email-addr {
+    font-size: 16px;
+  }
+}
