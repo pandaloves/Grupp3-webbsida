@@ -6,4 +6,4 @@ https://www.figma.com/proto/VSzDKCCv9cBubVoCspTfW4/Grupp-3-Projekt---%22Happy-Co
 https://docs.google.com/presentation/d/188HgeOb04YkyDLs4KrKo6b6U9YoFr8eBQwTosIYU94g/edit?usp=sharing
 
 3. Länken till Github webbsidorna:
-https://pandaloves.github.io/Grupp-3-project/
+ https://pandaloves.github.io/Grupp3-webbsida/
